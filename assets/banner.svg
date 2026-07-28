@@ -1,0 +1,104 @@
+<svg viewBox="0 0 1200 360" width="1200" height="360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05060f"/>
+      <stop offset="55%" stop-color="#0b1030"/>
+      <stop offset="100%" stop-color="#150a2e"/>
+    </linearGradient>
+    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3fd4ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#3fd4ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9b5cff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#9b5cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shellGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e9ecf5"/>
+      <stop offset="50%" stop-color="#b9c2da"/>
+      <stop offset="100%" stop-color="#6f7aa0"/>
+    </linearGradient>
+    <linearGradient id="shellDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#20223a"/>
+      <stop offset="100%" stop-color="#0a0b18"/>
+    </linearGradient>
+    <linearGradient id="chipEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3fd4ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#3fd4ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#3fd4ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="textGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cfe8ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="360" fill="url(#bgGrad)"/>
+
+  <circle cx="960" cy="90" r="220" fill="url(#glowBlue)"/>
+  <circle cx="1060" cy="260" r="180" fill="url(#glowPurple)"/>
+
+  <!-- circuit grid lines -->
+  <g stroke="#2c3766" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="130" x2="1200" y2="130"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="750" y1="0" x2="750" y2="360"/>
+    <line x1="900" y1="0" x2="900" y2="360"/>
+    <line x1="1050" y1="0" x2="1050" y2="360"/>
+  </g>
+
+  <!-- circuit nodes and traces on right side -->
+  <g stroke="#4fd8ff" stroke-width="2" fill="none" opacity="0.55">
+    <path d="M 780 40 L 780 100 L 840 100 L 840 150"/>
+    <path d="M 900 40 L 900 80 L 960 80"/>
+    <path d="M 1000 60 L 1000 120 L 1070 120 L 1070 90"/>
+    <path d="M 820 260 L 820 320 L 900 320"/>
+    <path d="M 1100 200 L 1140 200"/>
+    <path d="M 1000 300 L 1060 300 L 1060 260"/>
+  </g>
+  <g fill="#4fd8ff" opacity="0.85">
+    <circle cx="840" cy="150" r="4"/>
+    <circle cx="960" cy="80" r="4"/>
+    <circle cx="1070" cy="90" r="4"/>
+    <circle cx="900" cy="320" r="4"/>
+    <circle cx="1140" cy="200" r="4"/>
+    <circle cx="1060" cy="260" r="4"/>
+    <circle cx="780" cy="40" r="3.5"/>
+    <circle cx="1000" cy="60" r="3.5"/>
+  </g>
+
+  <!-- Stylized console shell (abstract PS5-esque monolith) -->
+  <g transform="translate(870,120)">
+    <path d="M0 30 C 10 -10 60 -25 110 -15 C 150 -7 180 20 175 90 C 172 150 140 190 90 200 C 40 210 -10 190 -25 140 C -38 95 -12 55 0 30 Z"
+          fill="url(#shellGrad)" opacity="0.95"/>
+    <path d="M15 40 C 25 5 65 -8 105 0 C 138 6 160 30 156 85 C 153 135 128 165 88 173 C 50 180 10 165 -2 125 C -13 90 3 60 15 40 Z"
+          fill="url(#shellDark)" opacity="0.9"/>
+    <path d="M40 20 L 45 190" stroke="url(#chipEdge)" stroke-width="6" opacity="0.8"/>
+    <circle cx="90" cy="95" r="14" fill="#0a0c1a" stroke="#4fd8ff" stroke-width="2" opacity="0.9"/>
+    <circle cx="90" cy="95" r="5" fill="#4fd8ff"/>
+  </g>
+
+  <!-- speed/data lines flowing left -->
+  <g stroke="#7a5cff" stroke-width="2" opacity="0.5">
+    <line x1="600" y1="80" x2="700" y2="80"/>
+    <line x1="580" y1="110" x2="720" y2="110"/>
+    <line x1="620" y1="290" x2="740" y2="290"/>
+    <line x1="590" y1="260" x2="710" y2="260"/>
+  </g>
+
+  <!-- Headline -->
+  <text x="60" y="150" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="80" fill="url(#textGlow)">
+    <tspan x="60" y="150" textLength="620" lengthAdjust="spacingAndGlyphs">PS5 Emulator</tspan>
+    <tspan x="60" y="235" textLength="240" lengthAdjust="spacingAndGlyphs" fill="#4fd8ff">PC</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="60" y="280" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#b9c6f0" opacity="0.9">
+    <tspan x="60" y="280" textLength="1080.0" lengthAdjust="spacingAndGlyphs" font-size="19.8">Emulates PS5 hardware on PC — built for gamers who want console titles running natively.</tspan>
+  </text>
+
+  <!-- accent underline -->
+  <rect x="60" y="300" width="180" height="4" fill="#4fd8ff" opacity="0.8"/>
+</svg>
